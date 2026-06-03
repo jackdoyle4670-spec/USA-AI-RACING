@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>USA AI Racing Tips</title>
+<style>
+body{font-family:Arial;padding:15px;background:#f5f5f5}
+.card{
+background:white;
+padding:12px;
+margin:10px 0;
+border-radius:10px;
+box-shadow:0 0 5px rgba(0,0,0,.1);
+}
+</style>
+</head>
+<body>
+
+<h1>🇺🇸 USA AI Racing Tips</h1>
+
+<div id="tips">Loading...</div>
+
+<script>
+
+// Replace this with a real race API later
+const races = [
+  {track:"Belmont Park",race:1,horse:"Thunder Road"},
+  {track:"Santa Anita",race:2,horse:"Silver King"},
+  {track:"Churchill Downs",race:3,horse:"Golden Star"}
+];
+
+let html="";
+
+races.forEach(r=>{
+ html += `
+ <div class="card">
+   <h3>${r.track} Race ${r.race}</h3>
+   <p>🏆 AI Pick: ${r.horse}</p>
+   <p>📊 Confidence: ${70 + Math.floor(Math.random()*21)}%</p>
+ </div>
+ `;
+});
+
+document.getElementById("tips").innerHTML = html;
+
+</script>
+
+</body>
+</html>
